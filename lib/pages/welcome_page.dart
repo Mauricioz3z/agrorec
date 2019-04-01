@@ -73,7 +73,7 @@ minWidth: double.infinity,
             
             color: Colors.blue,
               textColor:Colors.white,  
-              onPressed:(){Navigator.of(context).pushNamed('/settings'); }, child: Text('Adubação')
+              onPressed:(){Navigator.of(context).pushNamed('/culturas'); }, child: Text('Adubação')
               
               )
     

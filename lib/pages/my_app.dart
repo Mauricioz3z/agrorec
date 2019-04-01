@@ -1,5 +1,7 @@
 // import 'package:agrorecflutter/pages/MyHomePage.dart';
 // import 'package:agrorecflutter/pages/settings_page.dart';
+import 'package:agrorecflutter/Widget/Cultura.dart';
+import 'package:agrorecflutter/pages/culturas_page.dart';
 import 'package:agrorecflutter/pages/home_page.dart';
 import 'package:agrorecflutter/pages/settings_page.dart';
 import 'package:agrorecflutter/pages/welcome_page.dart';
@@ -20,6 +22,13 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context ) =>WelcomePage(),
         '/home':(context ) =>HomePage(),
+        '/culturas':(context)=>CulturaPage(cultura:
+      [
+        new Cultura('Eggs','assets/person.png',false),
+        new Cultura('Flour','assets/person.png',false),
+        new Cultura('Chocolate chips','assets/culturas/andropogon.jpg',false),
+      
+      ]),
         '/settings':(context)=>SettingsPage()
       },
     );

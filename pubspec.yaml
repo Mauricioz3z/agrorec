@@ -52,6 +52,8 @@ flutter:
       - assets/logo.png
       - assets/logo2.png
       - assets/agro.png
+      - assets/culturas/tanzania.png
+      - assets/culturas/andropogon.jpg
 
  
   # An image asset can refer to one or more resolution-specific "variants", see
