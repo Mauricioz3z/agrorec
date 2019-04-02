@@ -1,7 +1,8 @@
 // import 'package:agrorecflutter/pages/MyHomePage.dart';
 // import 'package:agrorecflutter/pages/settings_page.dart';
-import 'package:agrorecflutter/Widget/Cultura.dart';
+import 'package:agrorecflutter/pages/Cultura/Cultura.dart';
 import 'package:agrorecflutter/pages/culturas_page.dart';
+import 'package:agrorecflutter/pages/details_page.dart';
 import 'package:agrorecflutter/pages/home_page.dart';
 import 'package:agrorecflutter/pages/settings_page.dart';
 import 'package:agrorecflutter/pages/welcome_page.dart';
@@ -22,14 +23,15 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context ) =>WelcomePage(),
         '/home':(context ) =>HomePage(),
-        '/culturas':(context)=>CulturaPage(cultura:
-      [
-        new Cultura('Eggs','assets/person.png',false),
-        new Cultura('Flour','assets/person.png',false),
-        new Cultura('Chocolate chips','assets/culturas/andropogon.jpg',false),
-      
-      ]),
-        '/settings':(context)=>SettingsPage()
+        '/culturas':(context)=>CulturasPage(cultura: [new Cultura('Brachiaria brizantha cv. Marandu','assets/cultura/brizantha.jpg',false),
+                                                      new Cultura('Brachiaria Decumbens','assets/cultura/brizantha.jpg',false),
+                                                      new Cultura('Brachiaria Humidicola','assets/cultura/brizantha.jpg',false),
+                                                      new Cultura('Brachiaria Lianeiro','assets/cultura/brizantha.jpg',false),
+                                                      new Cultura('Brachiaria Ruziziensis','assets/cultura/brizantha.jpg',false),
+                                                      new Cultura('Brachiaria Xaraés/MG-5','assets/cultura/brizantha.jpg',false)
+                                                      ]),
+        '/settings':(context)=>SettingsPage(),
+        '/details':(context)=>DetailsPage()
       },
     );
   }

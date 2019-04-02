@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
 
@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
  final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-
+var controller = new MoneyMaskedTextController(decimalSeparator: '.');// new MaskedTextController(mask: '000.00');
 
   @override
   Widget build(BuildContext context) {
@@ -30,36 +30,38 @@ class _HomePageState extends State<HomePage> {
           child: new ListView(
             children: <Widget>[
               new TextFormField(
-                
-                keyboardType: TextInputType.numberWithOptions(decimal: true), // Use email input type for emails.
+                 keyboardType:TextInputType.number, //TextInputType.numberWithOptions(decimal: false),
                 decoration: new InputDecoration(
                   hintText: 'Ca da analise de solo',
                   labelText: 'Ca:'
                 )
               ),
                  new TextFormField(
-                keyboardType: TextInputType.number, // Use email input type for emails.
+           
+                keyboardType: TextInputType.number, 
                 decoration: new InputDecoration(
                   hintText: 'Mg da analise de solo',
                   labelText: 'Mg:'
                 )
               ),
               new TextFormField(
-                keyboardType: TextInputType.number, // Use email input type for emails.
+            
+                keyboardType: TextInputType.number, 
                 decoration: new InputDecoration(
                   hintText: 'CTC da analise de solo',
                   labelText: 'CTC:'
                 )
               ),
               new TextFormField(
-                keyboardType: TextInputType.number, // Use email input type for emails.
+              
+                keyboardType: TextInputType.number, 
                 decoration: new InputDecoration(
                   hintText: 'V% da analise de solo',
                   labelText: 'V%:'
                 )
               ),
               new TextFormField(
-                keyboardType: TextInputType.number, // Use email input type for emails.
+                keyboardType: TextInputType.number, 
                 decoration: new InputDecoration(
                   hintText: 'PRNT da analise de solo',
                   labelText: 'PRNT:',
@@ -92,6 +94,7 @@ class _HomePageState extends State<HomePage> {
           ),
         )
       ),
+  
     );
 
   

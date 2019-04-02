@@ -42,7 +42,7 @@ Padding(
       margin: const EdgeInsets.only(bottom: 30),
  
         
-     child:  Image.asset('assets/agro.png',width:200)
+     child:  Image.asset('assets/logo3.png',width:200)
    
       ), 
 
@@ -57,7 +57,7 @@ minWidth: double.infinity,
               
              color: Colors.green,
               textColor:Colors.white,  
-              onPressed:(){Navigator.of(context).pushNamed('/home'); }, child: Text('Calagem'))
+              onPressed:(){Navigator.of(context).pushNamed('/culturas'); }, child: Text('Calagem'))
     
  )
  
@@ -109,9 +109,7 @@ minWidth: double.infinity,
             color: Colors.red,
               textColor:Colors.white,  
               onPressed:(){Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context)=>DetailsPage(
-                        msg:"Esta mensagem veio da página inicial!"
-                      )  
+                      builder: (context)=>DetailsPage()  
 
               )); }, child: Text('Detalhes'))
     
@@ -128,8 +126,21 @@ minWidth: double.infinity,
 
       ),
 
-      
+      persistentFooterButtons: <Widget>[
+            Container(
+              height:  30.0,
+              width: MediaQuery.of(context).size.width,
+      child: Align(
+          alignment: Alignment(0,0),
+          child:Text('Mauricio Souza 2019 ©',  style: TextStyle(color: Colors.white))
+        
+        ) ,
 
+           
+            )
+
+      ],
+  backgroundColor:Colors.blue,
 
     
 

@@ -19,7 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_masked_text: ^0.8.0
+  charts_flutter: ^0.6.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -27,7 +28,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -51,10 +52,10 @@ flutter:
       - assets/bg3.jpg
       - assets/logo.png
       - assets/logo2.png
+      - assets/logo3.png
       - assets/agro.png
-      - assets/culturas/tanzania.png
-      - assets/culturas/andropogon.jpg
-
+      - assets/logo-bomsolo.png
+      - assets/cultura/brizantha.jpg
  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
