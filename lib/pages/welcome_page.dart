@@ -109,7 +109,7 @@ minWidth: double.infinity,
             color: Colors.red,
               textColor:Colors.white,  
               onPressed:(){Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context)=>DetailsPage()  
+                      builder: (context)=>DetailsPage(title:"Relátorio de performance" ,)  
 
               )); }, child: Text('Detalhes'))
     

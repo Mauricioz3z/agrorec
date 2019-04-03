@@ -1,7 +1,6 @@
+
 import 'package:agrorecflutter/pages/Cultura/Cultura.dart';
 import 'package:flutter/material.dart';
-
-
 
 class CulturaListItem extends StatefulWidget{
 

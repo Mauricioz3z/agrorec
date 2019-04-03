@@ -37,9 +37,15 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     var data = [
-      new ClicksPerYear('2016', 12, Colors.red),
-      new ClicksPerYear('2017', 42, Colors.yellow),
-      new ClicksPerYear('2018', _counter, Colors.green),
+      new ClicksPerYear('Ca', 12, Colors.red),
+      new ClicksPerYear('Mg', 13, Colors.yellow),
+      new ClicksPerYear('Ctc', 11, Colors.green),//_counter
+    ];
+
+        var data2 = [
+      new ClicksPerYear('Ca', 40, Colors.red),
+      new ClicksPerYear('Mg',  50, Colors.yellow),
+      new ClicksPerYear('Ctc', 60, Colors.green),//_counter
     ];
 
     var series = [
@@ -49,6 +55,16 @@ class _DetailsPageState extends State<DetailsPage> {
         colorFn: (ClicksPerYear clickData, _) => clickData.color,
         id: 'Clicks',
         data: data,
+      ),
+    ];
+
+        var series2 = [
+      new charts.Series(
+        domainFn: (ClicksPerYear clickData, _) => clickData.year,
+        measureFn: (ClicksPerYear clickData, _) => clickData.clicks,
+        colorFn: (ClicksPerYear clickData, _) => clickData.color,
+        id: 'Clicks',
+        data: data2,
       ),
     ];
 
@@ -64,8 +80,21 @@ class _DetailsPageState extends State<DetailsPage> {
     var chartWidget = new Padding(
       padding: new EdgeInsets.all(32.0),
       child: new SizedBox(
-        height: 200.0,
+        height: 130,
         child: chart,
+      ),
+    );
+
+
+  var chart2 =new charts.BarChart(
+      series2,
+      animate: true,
+    );
+   var chartWidget2 = new Padding(
+      padding: new EdgeInsets.all(32.0),
+      child: new SizedBox(
+        height: 130,
+        child: chart2,
       ),
     );
 
@@ -74,19 +103,62 @@ class _DetailsPageState extends State<DetailsPage> {
         title: new Text(widget.title),
       ),
       body: new Center(
-        child: new Column(
+
+   child: Column(
+   children: <Widget>[
+   SizedBox(
+          height: 250,
+  child:   Card(
+            
+           child:  Column(
+          
+
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+           
             new Text(
-              'You have pushed the button this many times:',
+              'Relátorio de performance do solo 2018',
             ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            // new Text(
+            //   '$_counter',
+            //   style: Theme.of(context).textTheme.display1,
+            // ),
             chartWidget,
           ],
+        )
         ),
+),
+   SizedBox(
+          height: 250,
+  child:   Card(
+            
+           child:  Column(
+          
+
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+           
+            new Text(
+              'Relátorio de performance do solo 2019',
+            ),
+            // new Text(
+            //   '$_counter',
+            //   style: Theme.of(context).textTheme.display1,
+            // ),
+            chartWidget2,
+          ],
+        )
+        ),
+)
+   ]
+
+   ), 
+
+         
+       
+
+         
+       
       ),
       floatingActionButton: new FloatingActionButton(
         onPressed: _incrementCounter,
