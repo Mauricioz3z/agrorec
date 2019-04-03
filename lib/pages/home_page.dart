@@ -76,7 +76,40 @@ var controller = new MoneyMaskedTextController(decimalSeparator: '.');// new Mas
               // ),
               new Container(
                 width: screenSize.width,
-                child: new RaisedButton(
+                child:Column(
+                  children: <Widget>[
+                     new RaisedButton(
+                  
+              child: Column( // Replace with a Row for horizontal icon + text
+                  children: <Widget>[
+              Align(
+                alignment: Alignment(-1,0.12),
+                child:  Icon(Icons.settings_overscan,color: Colors.white)
+            ),
+            Align(
+                alignment: Alignment.center,
+                child: Text(
+                    "",
+                    textAlign: TextAlign.center,
+                     style: new TextStyle(
+                      color: Colors.white
+                    )
+                )
+
+             
+            )
+
+
+                    
+                   
+                 
+                  ],
+                ),
+
+                  onPressed: () => null,
+                  color: Colors.green,
+                ),
+                new RaisedButton(
                   child: new Text(
                     'Gerar Resultado',
                     style: new TextStyle(
@@ -85,7 +118,11 @@ var controller = new MoneyMaskedTextController(decimalSeparator: '.');// new Mas
                   ),
                   onPressed: () => null,
                   color: Colors.blue,
+                )
+    
+                  ]
                 ),
+          
                 margin: new EdgeInsets.only(
                   top: 20.0
                 ),
