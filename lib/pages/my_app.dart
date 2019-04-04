@@ -1,6 +1,7 @@
 // import 'package:agrorecflutter/pages/MyHomePage.dart';
 // import 'package:agrorecflutter/pages/settings_page.dart';
 import 'package:agrorecflutter/pages/Cultura/Cultura.dart';
+import 'package:agrorecflutter/pages/ScanScreen.dart';
 import 'package:agrorecflutter/pages/culturas_page.dart';
 import 'package:agrorecflutter/pages/details_page.dart';
 import 'package:agrorecflutter/pages/home_page.dart';
@@ -31,7 +32,9 @@ class MyApp extends StatelessWidget {
                                                       new Cultura('Brachiaria Xaraés/MG-5','assets/cultura/brizantha.jpg',false)
                                                       ]),
         '/settings':(context)=>SettingsPage(),
-        '/details':(context)=>DetailsPage()
+        '/details':(context)=>DetailsPage(),
+        '/scan':(context)=>ScanScreen()
+
       },
     );
   }
